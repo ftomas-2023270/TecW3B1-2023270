@@ -16,14 +16,15 @@ router.post(
     login
 );
 
-router.post('/register',
+router.post(
+    '/register',
     [
         check('nombre','El nombre es obligatorio').not().isEmpty(),
         check('password','La contrasena debe tener mas de 6 caracteres').isLength({min:6}),
         check('correo','No es un correo valido').isEmail(),
         check('correo').custom(existenteEmail),
         check('role').custom(esRoleValido),
-        check('telefono','El telefono debe contener 8 numeros').isLength({min:8, max:8}),
+        check('phone','El telefono debe contener 8 numeros').isLength({min:8, max:8}),
         validarCampos
     ],
     register

@@ -3,7 +3,6 @@ import bcryptjs from 'bcryptjs';
 import Usuario from '../user/user.model.js';
 
 import  {generarJWT} from '../helpers/generate-jwt.js';
-import { json } from 'express';
 
 export const login = async(req, res) => {
     const {correo, password} = req.body;
