@@ -10,14 +10,14 @@ export const deleteFileonError = async (err, req, res, next)=>{
             console.error(`Error deleting file: `, unlinkErr)
         }
     }
-    if(err.stus === 400 || err.errors){
+    if(err.status === 400 || err.errors){
         return res.status(400).json({
             success: false,
-            errors: err.error
+            errors: err.errors
         });
     }
     return res.status(500).json({
         success: false,
-        message: err.error
+        message: err.message
     })
 }
