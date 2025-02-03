@@ -1,32 +1,24 @@
 import { Router } from "express";
-import { check } from "express-validator";
 import { login,register } from "./auth.controller.js";
-import { validarCampos } from "../middlewares/validar-campos.js";
-import { existenteEmail, esRoleValido } from "../helpers/db-validator.js";
+import { registerValidator,loginValidator} from "../middlewares/validator.js"
+import { uploadProfilePicture } from "../middlewares/multer-upload.js";
+import { deleteFileonError } from "../middlewares/delete-file-on-error.js";
 
 const router = new Router();
 
 router.post(
     '/login',
     [
-        check('correo','Este correo no es valido').isEmail(),
-        check('password','El password es obligatorio').not().isEmpty(),
-        validarCampos
+        
     ],
     login
 );
 
 router.post(
     '/register',
-    [
-        check('nombre','El nombre es obligatorio').not().isEmpty(),
-        check('password','La contrasena debe tener mas de 6 caracteres').isLength({min:6}),
-        check('correo','No es un correo valido').isEmail(),
-        check('correo').custom(existenteEmail),
-        check('role').custom(esRoleValido),
-        check('phone','El telefono debe contener 8 numeros').isLength({min:8, max:8}),
-        validarCampos
-    ],
+    uploadProfilePicture.single("profilePicture"),
+    registerValidator,
+    deleteFileonError,
     register
 )
 
