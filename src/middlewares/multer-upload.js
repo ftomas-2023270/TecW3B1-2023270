@@ -8,17 +8,17 @@ const MAX_SIZE = 10000000
 
 const createMulterConfig = (destinationPath) =>{
     return multer({
-         storage: multer.diskStorage({
-            destination: (req, file, cb ) => {
-                    const fullPath= join(CURRENT_DIR,destinationPath);
-                    req.filePath= fullPath;
-                    cb(null,fullPath);
-            },
-            filename: (req, file, cb)=>{
-                const fileExtension = extname(file.originalname);
-                const fileName = file.originalname.split(fileExtension)[0]
-                cb(null,`${fileName}-${Date.now()}${fileExtension}`)
-            }
+    storage: multer.diskStorage({
+        destination: (req, file, cb ) => {
+            const fullPath = join(CURRENT_DIR,destinationPath);
+            req.filePath= fullPath; //set the filePath on the request object
+            cb(null,fullPath);
+        },
+        filename: (req, file, cb)=>{
+            const fileExtension = extname(file.originalname);
+            const fileName = file.originalname.split(fileExtension)[0]
+            cb(null,`${fileName}-${Date.now()}${fileExtension}`)
+        }
     }),
     fileFilter: (req, file, cb )=>{
         if(MIMETYPES.includes(file.mimetype))cb(null,true);

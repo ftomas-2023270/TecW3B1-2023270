@@ -1,6 +1,5 @@
 import RoleSchema from "../role/role.model.js";
-
-import UserModel from "../user/user.model.js";
+import User from "../user/user.model.js";
 
 export const esRoleValido = async(role = '')=>{
     const existeRol = await RoleSchema.findOne({role});
@@ -16,5 +15,13 @@ export const existenteEmail = async(correo ='')=>{
 
     if(existeEmail){
         throw new Error(`El correo ${correo} ya esta registrado`)
+    }
+}
+
+export const existeUsuarioById= async(id= '')=>{
+    const existeUsuario = await User.findById(id);
+
+    if(!existeUsuario){
+        throw new Error(`El ID ${id} no existe`);
     }
 }

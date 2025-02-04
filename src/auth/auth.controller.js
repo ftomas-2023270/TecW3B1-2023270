@@ -4,27 +4,29 @@ import  {generarJWT} from '../helpers/generate-jwt.js';
 
 
 export const login = async(req, res) => {
+
     const {email, password, username} = req.body;
 
     try {
         const lowerEmail = email ? email.toLowerCase(): null;
         const lowerUsername= username ? username.toLowerCase(): null;
 
-        const user = await Usuario.findbyOne({})
-
+        const user = await Usuario.findOne({
+            $or: [{email: lowerEmail}, {username: lowerUsername}]
+        });
         if(!user){
             return res.status(400).json({
                 msg: 'Credenciales incorrectas, el correo no esta registrado'
             });
-        }
+        }   
 
-        if(!usuario.user){
+        if(!user.estado){
             return  res.status(400).json({
                 msg: 'El usuario no existe en la base de datos'
             });
         }
 
-        const validPassword= bcryptjs.compareSync(password,user.password);
+        const validPassword= await verify(user.password,password);
         if(!validPassword){
             return res.status(400).json({
                 msg: 'La contrasena es incorrecta'
