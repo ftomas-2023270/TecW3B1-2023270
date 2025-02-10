@@ -61,6 +61,7 @@ export const register = async(req, res) => {
         
         let profilePicture = req.file ? req.file.filename : null;
         const encryptedPassword = await hash (data.password)
+        console.log("BP 1");
 
         const user = await Usuario.create({
             name: data.name,
@@ -83,7 +84,7 @@ export const register = async(req, res) => {
         console.log(error);
 
         return res.status(500).json({
-            message: "User registratio failed",
+            message: "User registration failed",
             error: error.message
         });
     }
