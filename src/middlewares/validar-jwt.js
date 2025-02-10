@@ -17,7 +17,7 @@ export const validarJWT = async(req, res, next) =>{
 
         const usuario = await Usuario.findById(uid);
 
-        console.log("BP2")
+        console.log("BP1")
 
         if(!usuario){
             return res.status(401).json({
@@ -32,7 +32,7 @@ export const validarJWT = async(req, res, next) =>{
         }
 
         req.usuario = usuario;
-        console.log("BP3")
+        console.log("BP2")
 
         next();
     } catch (e) {
