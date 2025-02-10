@@ -1,0 +1,52 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Users",
+    "collectionId": "ff3f493b-4d9a-4496-b0c5-627dc5235159",
+    "dateExported": "2025-02-10T17:52:01.346Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "ab15c85c-ba9a-478e-94df-4568e0f0e371",
+            "colId": "ff3f493b-4d9a-4496-b0c5-627dc5235159",
+            "containerId": "",
+            "name": "getUsers",
+            "url": "http://localhost:3000/adoptionSystem/v1/users/?desde=0&limite=10",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-02-04T22:54:44.914Z",
+            "modified": "2025-02-10T14:20:55.100Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "desde",
+                    "value": "0",
+                    "isPath": false
+                },
+                {
+                    "name": "limite",
+                    "value": "10",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "90fcbb5a-79ae-43b9-ac10-7e3f72bc6117",
+            "colId": "ff3f493b-4d9a-4496-b0c5-627dc5235159",
+            "containerId": "",
+            "name": "deleteUser",
+            "url": "http://localhost:3000/adoptionSystem/v1/users/67aa32bcb3f13e747d703286",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2025-02-10T15:30:30.203Z",
+            "modified": "2025-02-10T17:10:33.235Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FhMzJiY2IzZjEzZTc0N2Q3MDMyODYiLCJpYXQiOjE3MzkyMDc0MDIsImV4cCI6MTczOTIxMTAwMn0.rgnqHZeSXQHvoJCqP1WbzwNb9O8bzcjjItDYepmxAY4"
+                }
+            ]
+        }
+    ],
+    "ref": "kG0CW3glPYbmL2KXKPsMUSxZ-AEv9Rw-uSOO1vj6rD4VU5Ujbi1D8l9XPB8Rb4CC-cQNM97NCErFlPSylE0TzQ"
+}

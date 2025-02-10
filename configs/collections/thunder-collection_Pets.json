@@ -1,0 +1,50 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Pets",
+    "collectionId": "871c1cfe-6aa2-4b44-9eb4-5dc4637cdb0a",
+    "dateExported": "2025-02-10T17:52:10.538Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "c8c4ce11-3b85-493b-8cc5-09fb4bc8a8e7",
+            "colId": "871c1cfe-6aa2-4b44-9eb4-5dc4637cdb0a",
+            "containerId": "",
+            "name": "addPet",
+            "url": "http://localhost:3000/adoptionSystem/v1/pets/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-02-10T14:27:33.116Z",
+            "modified": "2025-02-10T17:31:31.605Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FhMGEwZThhMTgzNTZiMDg3ZDA4ZmMiLCJpYXQiOjE3MzkyMDc1ODUsImV4cCI6MTczOTIxMTE4NX0.rfJWQPVSW8pcxJu-1gp4ThLPkBHNFgD8IcgO3NxztvI"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Clifford\",\n  \"description\":\"Chow Chow\",\n  \"age\":\"5\",\n  \"type\":\"Perro\",\n  \"email\":\"ftomas@gmail.com\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "95267c5c-44ca-408b-8cab-9af86bf49c31",
+            "colId": "871c1cfe-6aa2-4b44-9eb4-5dc4637cdb0a",
+            "containerId": "",
+            "name": "deletePet",
+            "url": "http://localhost:3000/adoptionSystem/v1/pets/67aa37f31127d82246c0fb0a",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2025-02-10T17:33:43.656Z",
+            "modified": "2025-02-10T17:47:27.184Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FhMGEwZThhMTgzNTZiMDg3ZDA4ZmMiLCJpYXQiOjE3MzkyMDc1ODUsImV4cCI6MTczOTIxMTE4NX0.rfJWQPVSW8pcxJu-1gp4ThLPkBHNFgD8IcgO3NxztvI"
+                }
+            ]
+        }
+    ],
+    "ref": "AIOvvlcNa5iB7KW9JTbUsMXempMHtc54IozgeVBQ2FTBUNdQiyJTPQZWqzNS22bSFi9-Pz3NrnuLO92sQWTSZw"
+}

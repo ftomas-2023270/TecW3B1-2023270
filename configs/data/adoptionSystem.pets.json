@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "67aa37f31127d82246c0fb0a"
+  },
+  "name": "Clifford",
+  "description": "Chow Chow",
+  "age": 5,
+  "type": "PERRO",
+  "keeper": {
+    "$oid": "67aa0a0e8a18356b087d08fc"
+  },
+  "status": false,
+  "createdAt": {
+    "$date": "2025-02-10T17:31:31.594Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-10T17:50:31.448Z"
+  }
+}]
