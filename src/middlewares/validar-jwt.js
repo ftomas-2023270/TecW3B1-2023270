@@ -17,6 +17,8 @@ export const validarJWT = async(req, res, next) =>{
 
         const usuario = await Usuario.findById(uid);
 
+        console.log("BP2")
+
         if(!usuario){
             return res.status(401).json({
                 msg: 'Usuario no existe en la base de datos'
@@ -30,6 +32,7 @@ export const validarJWT = async(req, res, next) =>{
         }
 
         req.usuario = usuario;
+        console.log("BP3")
 
         next();
     } catch (e) {

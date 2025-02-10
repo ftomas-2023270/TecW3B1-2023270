@@ -5,7 +5,7 @@ export const savePet = async(req, res )=>{
     try {
         const data = req.body;
         const user = await User.findOne({email: data.email});
-
+        console.log("BP1");
 
         if(!user){
             return res.status(404).json({
