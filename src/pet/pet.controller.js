@@ -108,10 +108,9 @@ export const searchPet = async (req, res) =>{
 }
 
 
-export const deletePet = async (res, req) =>{
+export const deletePet = async (req,res ) =>{
 
-    const {id} = req.params;
-
+    const {id}= req.params;
     try {
         
         await Pet.findByIdAndUpdate(id,{status: false});
