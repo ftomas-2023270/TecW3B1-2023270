@@ -2,7 +2,6 @@ import User from "../user/user.model.js";
 import Pet from "./pet.model.js";
 
 export const savePet = async(req, res )=>{
-    console.log("BP");
     try {
         const data = req.body;
         const user = await User.findOne({email: data.email});
@@ -48,7 +47,7 @@ export const getPets = async (req, res) =>{
         .skip(Number(desde))
         .skip(Number(limite));
 
-        const petsWithOwnerNames = await Promise.all(pets.map(async(pet)=>{
+        const petsWithOwnerNames = await Promise.all(pets.map(async (pet)=>{
             const owner = await User.findById(pet.keeper);
 
             return {
@@ -124,6 +123,30 @@ export const deletePet = async (req,res ) =>{
         res.status(500).json({
             success: false,
             message: 'Error al eliminar mascota',
+            error
+        })
+    }
+}
+
+export const updatePet = async (req, res) => {
+    
+    const {id} = req.params;
+    const {_id,...data} = req.body;
+
+    try {
+    
+        const pet = await Pet.findByIdAndUpdate(id,data,{new: true});
+        
+        res.status(200).json({
+            success: true,
+            message: 'Mascota Actualizada',
+            pet
+        })
+
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: 'No es posible editar a la mascota',
             error
         })
     }
