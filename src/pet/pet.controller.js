@@ -45,11 +45,10 @@ export const getPets = async (req, res) =>{
         
         const pets = await Pet.find(query)
         .skip(Number(desde))
-        .skip(Number(limite));
+        .limit(Number(limite));
 
         const petsWithOwnerNames = await Promise.all(pets.map(async (pet)=>{
             const owner = await User.findById(pet.keeper);
-
             return {
                 ...pet.toObject(),
                 keeper: owner ? owner.nombre : "Propietario no encontrado"

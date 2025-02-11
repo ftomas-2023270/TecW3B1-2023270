@@ -2,6 +2,40 @@ import { hash, verify } from 'argon2';
 import Usuario from '../user/user.model.js';
 import  {generarJWT} from '../helpers/generate-jwt.js';
 
+export const register = async(req, res) => {
+
+    try {
+        const data = req.body;
+        
+        let profilePicture = req.file ? req.file.filename : null;
+        const encryptedPassword = await hash (data.password);
+        
+        const user = await Usuario.create({
+            name: data.name,
+            surname: data.surname,
+            username: data.username,
+            email: data.email,
+            phone: data.phone,
+            password: encryptedPassword,
+            role: data.role,
+            profilePicture
+        })
+
+        return res.status(201).json({
+            message: "User registred succesfully",
+            userDetails:{
+                user: user.email
+            }
+        })
+    } catch (error) {
+        console.log(error);
+
+        return res.status(500).json({
+            message: "User registration failed",
+            error: error.message
+        });
+    }
+}
 
 export const login = async(req, res) => {
 
@@ -54,38 +88,3 @@ export const login = async(req, res) => {
     }
 }
 
-export const register = async(req, res) => {
-
-    try {
-        const data = req.body;
-        
-        let profilePicture = req.file ? req.file.filename : null;
-        const encryptedPassword = await hash (data.password)
-        console.log("BP 1");
-
-        const user = await Usuario.create({
-            name: data.name,
-            surname: data.surname,
-            username: data.username,
-            email: data.email,
-            phone: data.phone,
-            password: encryptedPassword,
-            role: data.role,
-            profilePicture
-        })
-
-        return res.status(201).json({
-            message: "User registred succesfully",
-            userDetails:{
-                user: user.email
-            }
-        })
-    } catch (error) {
-        console.log(error);
-
-        return res.status(500).json({
-            message: "User registration failed",
-            error: error.message
-        });
-    }
-}
