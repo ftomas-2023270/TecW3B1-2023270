@@ -18,3 +18,10 @@ export const loginValidator =[
     body("password", "The password must be at least 8 characters").isLength({min:8}),
     validarCampos
 ]
+
+export const upPassValidator=[
+    body("email").optional().isEmail().withMessage("Enter a valid email address"),
+    body("username").optional().isString().withMessage("Enter a valid username"),
+    body("password", "The password must be at least 8 characters").isLength({min:8}),
+    validarCampos
+]

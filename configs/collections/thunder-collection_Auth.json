@@ -1,50 +1,62 @@
 {
     "clientName": "Thunder Client",
     "collectionName": "Auth",
-    "collectionId": "2a43ec24-b367-473f-9303-eacc1831a553",
-    "dateExported": "2025-02-10T17:51:46.388Z",
+    "collectionId": "5855b279-1e76-4f71-b1d3-8cdc4a2bcc5f",
+    "dateExported": "2025-02-11T17:47:36.533Z",
     "version": "1.2",
     "folders": [],
     "requests": [
         {
-            "_id": "517e5025-d181-485c-92b5-7a3fab9094e0",
-            "colId": "2a43ec24-b367-473f-9303-eacc1831a553",
+            "_id": "ae5a6500-7979-4755-918f-0ff09d494061",
+            "colId": "5855b279-1e76-4f71-b1d3-8cdc4a2bcc5f",
             "containerId": "",
-            "name": "register",
+            "name": "Register",
             "url": "http://localhost:3000/adoptionSystem/v1/auth/register",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2025-02-03T22:06:05.897Z",
-            "modified": "2025-02-10T17:09:16.547Z",
+            "created": "2025-01-29T16:48:45.619Z",
+            "modified": "2025-02-05T22:19:13.944Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\n      \"name\": \"Adrian\",\n      \"surname\": \"Soto\",\n      \"username\": \"Rayo\",\n      \"email\": \"rayo@gmail.com\",\n      \"profilePicture\": \"\",\n      \"password\":\"ElRayoMilloGang\",\n      \"phone\": \"85698745\",\n      \"role\": \"ADMIN_ROLE\"\n}",
+                "raw": "{\n  \"name\": \"Alcon\",\n  \"surname\": \"Gonzales\",\n  \"username\": \"Alcon\",\n  \"email\": \"aldair-2023500@kinal.edu.gt\",\n  \"password\": \"12345777\",\n  \"profilePicture\": \"\",\n  \"phone\": \"11111111\",\n  \"role\": \"USER_ROLE\"\n}",
                 "form": []
             }
         },
         {
-            "_id": "f7e38844-ef9f-43f4-8c07-6a6f40ad82d3",
-            "colId": "2a43ec24-b367-473f-9303-eacc1831a553",
+            "_id": "ae629f82-bdad-4b9b-af51-50300bd860d9",
+            "colId": "5855b279-1e76-4f71-b1d3-8cdc4a2bcc5f",
             "containerId": "",
-            "name": "login",
+            "name": "Login",
             "url": "http://localhost:3000/adoptionSystem/v1/auth/login",
             "method": "POST",
             "sortNum": 20000,
-            "created": "2025-02-03T22:26:22.105Z",
-            "modified": "2025-02-10T17:13:15.535Z",
+            "created": "2025-01-29T21:51:54.474Z",
+            "modified": "2025-02-05T22:37:49.699Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FhMGEwZThhMTgzNTZiMDg3ZDA4ZmMiLCJpYXQiOjE3MzkyMDc1ODUsImV4cCI6MTczOTIxMTE4NX0.rfJWQPVSW8pcxJu-1gp4ThLPkBHNFgD8IcgO3NxztvI"
+                    "value": ""
                 }
             ],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"email\": \"ftomas@gmail.com\",\n  \"password\": \"LeoMessi1\"\n}",
+                "raw": "{\n  \"email\": \"aldair-2023500@kinal.edu.gt\",\n  \"password\": \"12345777\"\n}\n",
                 "form": []
             }
+        },
+        {
+            "_id": "2e4b543d-f66c-4651-8200-d9c6ff16b65e",
+            "colId": "5855b279-1e76-4f71-b1d3-8cdc4a2bcc5f",
+            "containerId": "",
+            "name": "updatePassword",
+            "url": "",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-02-11T17:29:15.999Z",
+            "modified": "2025-02-11T17:29:15.999Z",
+            "headers": []
         }
     ],
-    "ref": "L3vxtaQfKxPrfuSzZPrlb4M94uElNR-l3ed8yZ46nSeEkyqiuNzBUnIxJ5nJyrNK2WuasPnVL-98fdCOVvyGlA"
+    "ref": "o2nXuc5Em6YzQ5rrVvYwUjJoMWIRTSf7LTWTeQkse5FH7QWIr0tOBIdVte_-4tVCAkzWRUHnXt1WTLeHsDZbzg"
 }

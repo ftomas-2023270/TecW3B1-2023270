@@ -1,21 +1,21 @@
 {
     "clientName": "Thunder Client",
-    "collectionName": "Users",
-    "collectionId": "ff3f493b-4d9a-4496-b0c5-627dc5235159",
-    "dateExported": "2025-02-10T17:52:01.346Z",
+    "collectionName": "User",
+    "collectionId": "a2c40f4f-72b9-44e8-82a0-fb33571be718",
+    "dateExported": "2025-02-11T17:48:02.573Z",
     "version": "1.2",
     "folders": [],
     "requests": [
         {
-            "_id": "ab15c85c-ba9a-478e-94df-4568e0f0e371",
-            "colId": "ff3f493b-4d9a-4496-b0c5-627dc5235159",
+            "_id": "f0dbf4c8-9ce0-48c7-9e16-2f981c7e8bee",
+            "colId": "a2c40f4f-72b9-44e8-82a0-fb33571be718",
             "containerId": "",
             "name": "getUsers",
             "url": "http://localhost:3000/adoptionSystem/v1/users/?desde=0&limite=10",
             "method": "GET",
-            "sortNum": 10000,
-            "created": "2025-02-04T22:54:44.914Z",
-            "modified": "2025-02-10T14:20:55.100Z",
+            "sortNum": 5000,
+            "created": "2025-02-11T16:46:29.516Z",
+            "modified": "2025-02-11T16:47:27.121Z",
             "headers": [],
             "params": [
                 {
@@ -31,22 +31,44 @@
             ]
         },
         {
-            "_id": "90fcbb5a-79ae-43b9-ac10-7e3f72bc6117",
-            "colId": "ff3f493b-4d9a-4496-b0c5-627dc5235159",
+            "_id": "a6056642-0caf-4900-953c-c6dbff1b5f19",
+            "colId": "a2c40f4f-72b9-44e8-82a0-fb33571be718",
             "containerId": "",
             "name": "deleteUser",
-            "url": "http://localhost:3000/adoptionSystem/v1/users/67aa32bcb3f13e747d703286",
+            "url": "http://localhost:3000/adoptionSystem/v1/users/67a3bac089eece4701a351c4",
             "method": "DELETE",
-            "sortNum": 20000,
-            "created": "2025-02-10T15:30:30.203Z",
-            "modified": "2025-02-10T17:10:33.235Z",
+            "sortNum": 10000,
+            "created": "2025-02-05T19:24:44.342Z",
+            "modified": "2025-02-05T22:38:38.162Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FhMzJiY2IzZjEzZTc0N2Q3MDMyODYiLCJpYXQiOjE3MzkyMDc0MDIsImV4cCI6MTczOTIxMTAwMn0.rgnqHZeSXQHvoJCqP1WbzwNb9O8bzcjjItDYepmxAY4"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2EzZTNlY2ZhZjA4N2I1Yjc3Mzc1YjIiLCJpYXQiOjE3Mzg3OTUwNjksImV4cCI6MTczODc5ODY2OX0.WxnE7FNqXmRGXfIhlaP3foy69GcNX8hDDZCypg2unok"
                 }
             ]
+        },
+        {
+            "_id": "219422c4-c511-45ca-bf2f-fc56b1857796",
+            "colId": "a2c40f4f-72b9-44e8-82a0-fb33571be718",
+            "containerId": "",
+            "name": "addAppt",
+            "url": "http://localhost:3000/adoptionSystem/v1/appt/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2025-02-11T14:53:01.950Z",
+            "modified": "2025-02-11T17:01:11.452Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2EzZTNlY2ZhZjA4N2I1Yjc3Mzc1YjIiLCJpYXQiOjE3MzkyOTIxMDIsImV4cCI6MTczOTI5NTcwMn0.yTQ2PrsdwaRyO66A5WpePy7PTnxV4gbKuJj-xdN6MM4"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":\"67a3c3b5062ebdc0283b49c5\",\n  \"description\":\"Castracion\",\n  \"date\":\"11/02/2025\"\n}",
+                "form": []
+            }
         }
     ],
-    "ref": "kG0CW3glPYbmL2KXKPsMUSxZ-AEv9Rw-uSOO1vj6rD4VU5Ujbi1D8l9XPB8Rb4CC-cQNM97NCErFlPSylE0TzQ"
+    "ref": "odzHoaqAGm8TiVuVaP0N7mTO2VSWRJulA5yc0XeBdk3XOsydj_iUCk0nGcasCcvB1J1KcbOGXFAYS6dH2CHHGg"
 }

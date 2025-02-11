@@ -59,7 +59,7 @@ export const updateUser = async(req,res = response)=>{
     try {
         
         const {id} = req.params;
-        const { _id,password,email, ...data }= req.body;
+        const {password,email, ...data }= req.body;
 
         if(password){
             data.password = await hash(password)

@@ -88,3 +88,39 @@ export const login = async(req, res) => {
     }
 }
 
+export const updatePassword = async (req, res) => {
+    
+    const {id} = req.params;
+    const { _id,password,email,oldPassword, username,...data}= req.body;
+
+    try {
+        const lowerEmail = email ? email.toLowerCase(): null;
+        const lowerUsername= data.username ? username.toLowerCase(): null;
+
+        const user = await Usuario.findOne({
+            $or: [{email: lowerEmail}, {username: lowerUsername}]
+        });
+
+        const validPassword= await verify(user.password,oldPassword);
+        if(!validPassword){
+            return res.status(400).json({
+                msg: 'La contrasena es incorrecta'
+            });
+        }
+            const newUser = await User.findByIdAndUpdate(id, data, {
+                    $or: [{email: lowerEmail}, {username: lowerUsername}]});
+ 
+            return res.status(200).json({
+                success: true,
+                msg:'Contraseña actualizada correctamente',
+                newUser
+            })
+        
+    } catch (error) {
+        res.status(500).json({
+            success: "Update password error",
+            error
+        })
+    }
+
+}
