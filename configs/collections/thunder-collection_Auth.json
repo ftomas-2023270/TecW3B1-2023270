@@ -1,0 +1,62 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Auth",
+    "collectionId": "5855b279-1e76-4f71-b1d3-8cdc4a2bcc5f",
+    "dateExported": "2025-02-11T17:47:36.533Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "ae5a6500-7979-4755-918f-0ff09d494061",
+            "colId": "5855b279-1e76-4f71-b1d3-8cdc4a2bcc5f",
+            "containerId": "",
+            "name": "Register",
+            "url": "http://localhost:3000/adoptionSystem/v1/auth/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-01-29T16:48:45.619Z",
+            "modified": "2025-02-05T22:19:13.944Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Alcon\",\n  \"surname\": \"Gonzales\",\n  \"username\": \"Alcon\",\n  \"email\": \"aldair-2023500@kinal.edu.gt\",\n  \"password\": \"12345777\",\n  \"profilePicture\": \"\",\n  \"phone\": \"11111111\",\n  \"role\": \"USER_ROLE\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "ae629f82-bdad-4b9b-af51-50300bd860d9",
+            "colId": "5855b279-1e76-4f71-b1d3-8cdc4a2bcc5f",
+            "containerId": "",
+            "name": "Login",
+            "url": "http://localhost:3000/adoptionSystem/v1/auth/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2025-01-29T21:51:54.474Z",
+            "modified": "2025-02-05T22:37:49.699Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": ""
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"aldair-2023500@kinal.edu.gt\",\n  \"password\": \"12345777\"\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "2e4b543d-f66c-4651-8200-d9c6ff16b65e",
+            "colId": "5855b279-1e76-4f71-b1d3-8cdc4a2bcc5f",
+            "containerId": "",
+            "name": "updatePassword",
+            "url": "",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-02-11T17:29:15.999Z",
+            "modified": "2025-02-11T17:29:15.999Z",
+            "headers": []
+        }
+    ],
+    "ref": "o2nXuc5Em6YzQ5rrVvYwUjJoMWIRTSf7LTWTeQkse5FH7QWIr0tOBIdVte_-4tVCAkzWRUHnXt1WTLeHsDZbzg"
+}
